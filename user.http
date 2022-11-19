@@ -1,0 +1,41 @@
+@URL=http://localhost/backend
+
+
+### Criar um usuário
+POST {{URL}}/user/create.php
+Content-Type: application/json
+
+{
+    "nome": "Juca da Silva",
+    "email": "juca2@gmail.com",
+    "senha": "1234",
+    "perfil": "juca"
+}
+
+
+
+### Atualizar um usuário
+POST {{URL}}/user/update.php?id=1
+Content-Type: application/json
+
+{
+    "nome": "Juca da Silva",
+    "email": "juca2@gmail.com",
+    "senha": "12345",
+    "perfil": "juca"
+}
+
+
+
+### Obter todos os usuários
+GET {{URL}}/user/list.php
+
+
+
+### Obter um usuário pelo ID
+GET {{URL}}/user/list.php?id=1
+
+
+
+### Deletar um usuário
+GET {{URL}}/user/delete.php?id=1
