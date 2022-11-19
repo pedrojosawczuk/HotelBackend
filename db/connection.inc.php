@@ -3,7 +3,7 @@
     $host = 'localhost';
     $user = 'root';
     $pass = '';
-    $db = 'db_user';
+    $db = 'db_hotel';
     $port = 3306;
 
     // Connect to the MySQL database using the PDO object.
