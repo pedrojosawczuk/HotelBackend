@@ -43,3 +43,11 @@ CREATE TABLE tb_reservation (
     CONSTRAINT fk_reservationXroom
         FOREIGN KEY (fk_room) REFERENCES tb_room (id)
 );
+
+/* Add 3 Users tb_user */
+INSERT INTO tb_user (nome, email,  senha, perfil)
+    VALUES ('Juca da Silva', 'juca1@gmail.com', 1234, 'juca1');
+INSERT INTO tb_user (nome, email,  senha, perfil)
+    VALUES ('Juca da Silva', 'juca2@gmail.com', 1234, 'juca2');
+INSERT INTO tb_user (nome, email,  senha, perfil)
+    VALUES ('Juca da Silva', 'juca3@gmail.com', 1234, 'juca3');
