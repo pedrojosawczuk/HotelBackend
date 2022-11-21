@@ -1,3 +1,8 @@
+DROP TABLE tb_reservation;
+DROP TABLE tb_rate;
+DROP TABLE tb_user;
+DROP TABLE tb_room;
+
 CREATE TABLE tb_user (
     id BIGINT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
