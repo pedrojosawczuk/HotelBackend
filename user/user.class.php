@@ -1,6 +1,6 @@
 <?php
     class User {
-        function __construct($nome, $nascimento, $telefone, $email, $login, $senha)
+        function __construct($nome, $email, $senha, $perfil)
         {
             $this -> nome = $nome;
             $this -> email = $email;
