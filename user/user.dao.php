@@ -29,10 +29,11 @@ class UserDAO
 
     public function insert($user)
     {
-        $stmt = $this -> pdo -> prepare("INSERT INTO tb_user (nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
+        $stmt = $this -> pdo -> prepare("INSERT INTO tb_user (nome, email,  senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
         $stmt -> bindValue(':nome', $user -> nome);
         $stmt -> bindValue(':email', $user -> email);
-        $stmt -> bindValue(':senha', $user -> senha);$stmt -> bindValue(':perfil', $user -> perfil);
+        $stmt -> bindValue(':senha', $user -> senha);
+        $stmt -> bindValue(':perfil', $user -> perfil);
 
         $stmt -> execute();
         $user = clone $user;
