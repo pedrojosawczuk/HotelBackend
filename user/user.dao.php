@@ -10,7 +10,7 @@ class UserDAO
     public function get($id)
     {
         //Prepare our select statement.
-        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_usuario WHERE id = ?");
+        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_user WHERE id = ?");
         $stmt -> bindParam(1, $_REQUEST['id']);
 
         $stmt -> execute();
@@ -20,7 +20,7 @@ class UserDAO
     public function getAll()
     {
         //Prepare our select statement.
-        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_usuario");
+        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_user");
         $stmt -> execute();
 
         // Retorna um array de objetos
@@ -29,7 +29,7 @@ class UserDAO
 
     public function insert($user)
     {
-        $stmt = $this -> pdo -> prepare("INSERT INTO tb_usuario (nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
+        $stmt = $this -> pdo -> prepare("INSERT INTO tb_user (nome, email, senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
         $stmt -> bindValue(':nome', $user -> nome);
         $stmt -> bindValue(':email', $user -> email);
         $stmt -> bindValue(':senha', $user -> senha);$stmt -> bindValue(':perfil', $user -> perfil);
@@ -44,7 +44,7 @@ class UserDAO
 
     public function update($id, $user)
     {
-        $stmt = $this -> pdo -> prepare("UPDATE tb_usuario
+        $stmt = $this -> pdo -> prepare("UPDATE tb_user
             SET
                 nome = :nome,
                 email = :email,
@@ -66,7 +66,7 @@ class UserDAO
 
     public function delete($id)
     {
-        $stmt = $this -> pdo -> prepare("DELETE from tb_usuario WHERE id = ?");
+        $stmt = $this -> pdo -> prepare("DELETE from tb_user WHERE id = ?");
         $stmt -> bindParam(1, $id);
 
         $stmt -> execute();

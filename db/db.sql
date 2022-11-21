@@ -1,4 +1,4 @@
-CREATE TABLE tb_usuario (
+CREATE TABLE tb_user (
     id BIGINT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -8,7 +8,7 @@ CREATE TABLE tb_usuario (
     UNIQUE(email)
 );
 
-CREATE TABLE tb_acomodacao (
+CREATE TABLE tb_room (
     id BIGINT NOT NULL AUTO_INCREMENT,
     qt_cama_casal INT(20) NOT NULL default 0,
     qt_cama_solteiro INT(20) NOT NULL default 0,
@@ -17,24 +17,24 @@ CREATE TABLE tb_acomodacao (
     PRIMARY KEY  (id)
 );
 
-CREATE TABLE tb_tarifa (
+CREATE TABLE tb_rate (
     id BIGINT NOT NULL AUTO_INCREMENT,
     tipo_acomodacoes VARCHAR(1) NOT NULL default 'S',
     preco DECIMAL(12, 2) NOT NULL,
     PRIMARY KEY  (id)
 );
 
-CREATE TABLE tb_reserva (
+CREATE TABLE tb_reservation (
     id BIGINT NOT NULL AUTO_INCREMENT,
     dt_entrada DATETIME(6) NOT NULL,
     dt_saida DATETIME(6) NOT NULL,
     qt_hospedes INT(10) NOT NULL default 1,
     fk_user BIGINT,
-    fk_acomodacao BIGINT,
-    vl_reserva DECIMAL(12, 2) NOT NULL,
+    fk_room BIGINT,
+    vl_reservation DECIMAL(12, 2) NOT NULL,
     PRIMARY KEY  (id),
-    CONSTRAINT fk_reservaXuser
-        FOREIGN KEY (fk_user) REFERENCES tb_usuario (id),
-    CONSTRAINT fk_reservaXacomodacao
-        FOREIGN KEY (fk_acomodacao) REFERENCES tb_acomodacao (id)
+    CONSTRAINT fk_reservationXuser
+        FOREIGN KEY (fk_user) REFERENCES tb_user (id),
+    CONSTRAINT fk_reservationXroom
+        FOREIGN KEY (fk_room) REFERENCES tb_room (id)
 );
