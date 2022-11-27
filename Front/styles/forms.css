@@ -1,0 +1,53 @@
+@import url(colors.css);
+
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.forms form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.button-sub{
+    background-color: var(--Blue-Green);
+    border-radius: 8px;
+    border: 1px solid var(--Blue-Green);
+    padding: 5px;
+    color: var(--Blue-Dark);
+    font-weight: 700;
+    transition: 0,5s;
+    text-decoration: none;
+}
+
+.button-sub:focus{
+    background-color: var(--Blue-Dark);
+    border-radius: 8px;
+    border: 1px solid var(--Blue-Dark);
+    padding: 5px;
+    color: var(--White);
+    font-weight: 700;
+}
+
+.button-cad{
+    margin-top: 8px;
+    background-color: var(--Blue-Green);
+    border-radius: 8px;
+    border: 1px solid var(--Blue-Green);
+    padding: 5px;
+    color: var(--Blue-Dark);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0,5s;
+    text-align: center;
+}
+
+.text-area{
+    display: flex;
+    flex-direction: column;
+}

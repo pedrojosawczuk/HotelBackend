@@ -1,0 +1,62 @@
+@import url(colors.css);
+
+
+.card-room{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+
+}
+
+.card-room > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-room > div > img{
+    max-width: 400px;
+    min-width: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.card-room > div > img:hover{
+    max-width: 500px;
+    min-width: 500px;
+    max-height: 500px;
+    min-height: 500px;
+    border-radius: 20%;
+}
+
+.card-room > div > img:hover + .card-room > ul{
+    display: flex;
+}
+
+.card-room > div > img:hover .card-room > ul{
+    display: flex;
+}
+
+.card-room > div > h2{
+    display: flex;
+    justify-content: center;
+}
+
+.card-room > ul{
+    font-size: 40px;
+    align-self: center;
+}
+
+
+thead tr{
+    background-color: blue;
+    border: blue;
+
+}
+
+table tr td {
+    background-color: lightblue;
+}

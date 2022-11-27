@@ -1,0 +1,152 @@
+@import url(colors.css);
+@import url(index.css);
+@import url(acomodacoes.css);
+@import url(forms.css);
+
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+}
+
+header{
+    background: rgb(93,118,255);
+    background: linear-gradient(90deg, rgba(58,55,99,1) 0%, rgba(2,22,75,1) 35%, rgba(93,118,255,1) 100%);
+    padding: 19px 0px;
+    min-height: 90px;
+    height: 104px;
+    width: 100%;
+}
+
+header a{
+    color: var(--White);
+    text-decoration: none;
+}
+
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header .title{
+    color: var(--White);
+    text-decoration: none;
+    width: fit-content;
+}
+
+header .title > h1{
+    display: flex;
+    justify-content: center;
+}
+
+h1 , h2, h3, h4, h5, h6{
+    font-family: 'Great Vibes', cursive;
+}
+
+header .title:hover{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.tab-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tab-container li{
+    padding: 0px 50px;
+}
+
+.tab-container li > a:hover{
+    text-decoration: none;
+    color: var(--Blue-Green);
+}
+
+.tab-selected{
+    border-bottom: 2px solid var(--White);
+}
+
+
+.prop-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 11% 0%;
+}
+
+aside{
+    width: 10%;
+}
+
+.button-back-to-top{
+    text-decoration: none;
+    align-self: flex-end;
+    margin-bottom: 24px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-self: baseline;
+    background: rgb(93,118,255);
+    background: linear-gradient(90deg, rgba(58,55,99,1) 0%, rgba(2,22,75,1) 35%, rgba(93,118,255,1) 100%);
+    padding: 19px 0px;
+    min-height: 90px;
+    width: 100%;
+}
+
+footer p {
+    font-size: 12px;
+    color: var(--White);
+}
+
+.header-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media (max-width: 860px) {
+    aside{
+        display: none;
+    }
+    
+}
+  
+
+@media (max-width: 778px) {
+    .tab-container{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tab-container li{
+        padding: 0px 25px;
+    }
+
+    .hotel-image{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 555px) {
+
+    .tab-container li{
+        padding: 0px 16px;
+    }
+    
+}
