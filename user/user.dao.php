@@ -7,6 +7,17 @@ class UserDAO
         $this -> pdo = $pdo;
     }
 
+    public function login($email, $senha)
+    {
+        //Prepare our select statement.
+        $stmt = $this -> pdo -> prepare("SELECT nome, perfil FROM tb_user WHERE email = ? AND senha = ?");
+        $stmt -> bindParam(1, $email);
+        $stmt -> bindParam(2, $senha);
+
+        $stmt -> execute();
+        return $stmt -> fetchObject();
+    }
+
     public function get($email)
     {
         //Prepare our select statement.
