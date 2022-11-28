@@ -6,9 +6,9 @@ $userDAO = new UserDAO($pdo);
 
 $responseBody;
 
-if (@$_REQUEST['id']) { // Retornar um único objeto pelo ID
+if (@$_REQUEST['email']) { // Retornar um único objeto pelo ID
 
-    if ($res = $userDAO -> get($_REQUEST['id']))
+    if ($res = $userDAO -> get($_REQUEST['email']))
         $responseBody = json_encode($res);
     else {
         http_response_code(404);

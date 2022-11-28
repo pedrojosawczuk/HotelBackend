@@ -10,16 +10,16 @@ $json = file_get_contents('php://input');
 // Transforma o JSON em um Objeto PHP
 $user = json_decode($json);
 
-$id = @$_REQUEST['id'];
+$email = @$_REQUEST['email'];
 
 $responseBody = '';
 
-if (!$id) {
+if (!$email) {
     http_response_code(400);
-    $responseBody = '{ "message": "ID não informado" }';
+    $responseBody = '{ "message": "EMAIL não informado" }';
 } else {
     try {
-        $userDAO -> update($id, $user);
+        $userDAO -> update($email, $user);
     } catch (Exception $e) {
         // Muda o código de resposta HTTP para 'bad request'
         http_response_code(400);

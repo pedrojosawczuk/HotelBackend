@@ -4,16 +4,16 @@ require_once("user.dao.php");
 
 $userDAO = new UserDAO($pdo);
 
-$id = @$_REQUEST['id'];
+$email = @$_REQUEST['email'];
 
 $responseBody = '';
 
-if (!$id) {
+if (!$email) {
     http_response_code(400);
-    $responseBody = '{ "message": "ID não informado" }';
+    $responseBody = '{ "message": "Email não informado" }';
 } else {
     try {
-        if ($userDAO->delete($id) != 1) {
+        if ($userDAO->delete($email) != 1) {
             // Muda o código de resposta HTTP para 'not found'
             http_response_code(404);
             $responseBody = '{ "message": "Usuário não encontrado" }';
