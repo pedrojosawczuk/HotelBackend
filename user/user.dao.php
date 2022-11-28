@@ -10,7 +10,7 @@ class UserDAO
     public function login($email, $senha)
     {
         //Prepare our select statement.
-        $stmt = $this -> pdo -> prepare("SELECT nome, perfil FROM tb_user WHERE email = ? AND senha = ?");
+        $stmt = $this -> pdo -> prepare("SELECT nome, email, perfil FROM tb_user WHERE email = ? AND senha = ?");
         $stmt -> bindParam(1, $email);
         $stmt -> bindParam(2, $senha);
 
@@ -35,7 +35,7 @@ class UserDAO
         $stmt -> execute();
 
         // Retorna um array de objetos
-        return $stmt->fetchAll(PDO::FETCH_CLASS);
+        return $stmt -> fetchAll(PDO::FETCH_CLASS);
     }
 
     public function insert($user)
@@ -73,7 +73,7 @@ class UserDAO
             'perfil' => $user -> perfil,
         ];
 
-        return $stmt->execute($data);
+        return $stmt -> execute($data);
     }
 
     public function delete($email)

@@ -26,7 +26,6 @@ if (!$email) { // Retornar um único objeto pelo ID
         http_response_code(400);
         $responseBody = '{ "message": "Ocorreu um erro ao tentar executar esta ação. Erro: Código: ' .  $e -> getCode() . '. Mensagem: ' . $e -> getMessage() . '" }';
     }
-    
 }
 
 // Defique que o conteúdo da resposta será um JSON (application/JSON)

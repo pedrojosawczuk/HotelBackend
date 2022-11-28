@@ -1,6 +1,5 @@
 @URL=http://localhost/backend
 
-
 ### Criar um usuário
 POST {{URL}}/user/create.php
 Content-Type: application/json
@@ -12,9 +11,22 @@ Content-Type: application/json
     "perfil": "user"
 }
 
+### Fazer o login (Gerar o token)
+POST {{URL}}/user/login.php
+Content-Type: application/json
+
+{
+    "email": "juca2@gmail.com",
+    "senha": "juquinha2"
+}
+
+### Consumir um recurso qualquer da API
+POST {{URL}}/auth/recursoqualquer.php
+// Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
 
 ### Atualizar um usuário
-POST {{URL}}/user/update.php?email=juca2@gmail.com
+POST {{URL}}/user/update.php
 Content-Type: application/json
 
 {
@@ -23,7 +35,6 @@ Content-Type: application/json
     "senha": "juquinha2",
     "perfil": "user"
 }
-
 
 ### Obter todos os usuários
 POST {{URL}}/user/list.php
