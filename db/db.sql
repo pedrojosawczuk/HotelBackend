@@ -46,8 +46,8 @@ CREATE TABLE tb_reservation (
 
 /* Add 3 Users tb_user */
 INSERT INTO tb_user (nome, email,  senha, perfil)
-    VALUES ('Juca da Silva', 'juca1@gmail.com', 1234, 'juca1');
+    VALUES ('Juca da Silva', 'juca1@gmail.com', 1234, 'admin');
 INSERT INTO tb_user (nome, email,  senha, perfil)
-    VALUES ('Juca da Silva', 'juca2@gmail.com', 1234, 'juca2');
+    VALUES ('Juca da Silva', 'juca2@gmail.com', 1234, 'user');
 INSERT INTO tb_user (nome, email,  senha, perfil)
-    VALUES ('Juca da Silva', 'juca3@gmail.com', 1234, 'juca3');
+    VALUES ('Juca da Silva', 'juca3@gmail.com', 1234, 'user');
