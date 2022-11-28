@@ -10,7 +10,7 @@ $json = file_get_contents('php://input');
 // Transforma o JSON em um Objeto PHP
 $user = json_decode($json);
 
-$email = @$_REQUEST['email'];
+$email = $user -> email;
 
 $responseBody = '';
 

@@ -4,21 +4,33 @@ require_once("user.dao.php");
 
 $userDAO = new UserDAO($pdo);
 
-$responseBody;
+// Obter o corpo da requisição
+$json = file_get_contents('php://input');
 
-if (@$_REQUEST['email']) { // Retornar um único objeto pelo ID
+// Transforma o JSON em um Objeto PHP
+$user = json_decode($json);
 
-    if ($res = $userDAO -> get($_REQUEST['email']))
-        $responseBody = json_encode($res);
-    else {
-        http_response_code(404);
-        $responseBody = '{ "message": "Usuário não existe" }';
+$email = $user -> email;
+
+$responseBody = '';
+
+if (!$email) { // Retornar um único objeto pelo ID
+    $user = $userDAO -> getAll();
+    $responseBody = json_encode($user);
+} else {
+    try {
+        $user = $userDAO -> get($email);
+        $responseBody = json_encode($user);
+    } catch (Exception $e) {
+        // Muda o código de resposta HTTP para 'bad request'
+        http_response_code(400);
+        $responseBody = '{ "message": "Ocorreu um erro ao tentar executar esta ação. Erro: Código: ' .  $e -> getCode() . '. Mensagem: ' . $e -> getMessage() . '" }';
     }
-} else { // Retornar todos os objetos
-    $responseBody = json_encode(
-        $userDAO -> getAll()
-    );
+    
 }
 
+// Defique que o conteúdo da resposta será um JSON (application/JSON)
 header('Content-Type: application/json');
+
+// Exibe a resposta
 print_r($responseBody);

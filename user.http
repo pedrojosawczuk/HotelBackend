@@ -7,35 +7,45 @@ Content-Type: application/json
 
 {
     "nome": "Juca da Silva",
-    "email": "juca2@gmail.com",
+    "email": "juca4@gmail.com",
     "senha": "1234",
-    "perfil": "juca"
+    "perfil": "user"
 }
 
 
-
 ### Atualizar um usuário
-POST {{URL}}/user/update.php?id=1
+POST {{URL}}/user/update.php?email=juca2@gmail.com
 Content-Type: application/json
 
 {
     "nome": "Juca da Silva",
     "email": "juca2@gmail.com",
-    "senha": "12345",
-    "perfil": "juca"
+    "senha": "juquinha2",
+    "perfil": "user"
 }
 
 
-
 ### Obter todos os usuários
-GET {{URL}}/user/list.php
+POST {{URL}}/user/list.php
+Content-Type: application/json
+
+{
+    "email": ""
+}
 
 
+### Obter um usuário pelo EMAIL
+POST {{URL}}/user/list.php
+Content-Type: application/json
 
-### Obter um usuário pelo ID
-GET {{URL}}/user/list.php?id=1
-
-
+{
+    "email": "juca2@gmail.com"
+}
 
 ### Deletar um usuário
-GET {{URL}}/user/delete.php?id=1
+POST {{URL}}/user/delete.php
+Content-Type: application/json
+
+{
+    "email": "juca4@gmail.com"
+}
