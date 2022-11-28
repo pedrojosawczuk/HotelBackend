@@ -1,0 +1,54 @@
+@URL=http://localhost/backend
+
+### Criar uma acomodação
+POST {{URL}}/acomodacoes/create.php
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
+
+{
+    "qt_cama_casal": 1,
+    "qt_cama_solteiro": 2,
+    "camas_extras": 0,
+    "tipo_acomodacoes": "S"
+}
+
+### Atualizar uma acomodação
+POST {{URL}}/acomodacoes/update.php
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
+
+{
+    "id": 4,
+    "qt_cama_casal": 1,
+    "qt_cama_solteiro": 2,
+    "camas_extras": 0,
+    "tipo_acomodacoes": "L"
+}
+
+### Obter todas as acomodações
+POST {{URL}}/acomodacoes/list.php
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
+
+{
+    "id": ""
+}
+
+
+### Obter uma acomodação pelo EMAIL
+POST {{URL}}/acomodacoes/list.php
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
+
+{
+    "id": 2
+}
+
+### Deletar uma acomodação
+POST {{URL}}/acomodacoes/delete.php
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1Y2ExQGdtYWlsLmNvbSIsInBlcmZpbCI6ImFkbWluIn0.ThY0ie298AfDyQ1o_3blKJu8XD8IDlpF9HbaAqjOigQ
+
+{
+    "id": 1
+}
