@@ -7,11 +7,11 @@ class UserDAO
         $this -> pdo = $pdo;
     }
 
-    public function get($id)
+    public function get($email)
     {
         //Prepare our select statement.
-        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_user WHERE id = ?");
-        $stmt -> bindParam(1, $_REQUEST['id']);
+        $stmt = $this -> pdo -> prepare("SELECT * FROM tb_user WHERE email = ?");
+        $stmt -> bindParam(1, $_REQUEST['email']);
 
         $stmt -> execute();
         return $stmt -> fetchObject();
@@ -43,7 +43,7 @@ class UserDAO
         return $user;
     }
 
-    public function update($id, $user)
+    public function update($email, $user)
     {
         $stmt = $this -> pdo -> prepare("UPDATE tb_user
             SET
@@ -52,10 +52,10 @@ class UserDAO
                 senha = :senha,
                 perfil = :perfil
             WHERE
-                id = :id");
+                email = :email");
 
-        $data = [
-            'id' => $id,
+        $data = [/*
+            'id' => $id,*/
             'nome' => $user -> nome,
             'email' => $user -> email,
             'senha' => $user -> senha,
@@ -65,10 +65,10 @@ class UserDAO
         return $stmt->execute($data);
     }
 
-    public function delete($id)
+    public function delete($email)
     {
-        $stmt = $this -> pdo -> prepare("DELETE from tb_user WHERE id = ?");
-        $stmt -> bindParam(1, $id);
+        $stmt = $this -> pdo -> prepare("DELETE from tb_user WHERE email = ?");
+        $stmt -> bindParam(1, $email);
 
         $stmt -> execute();
 
