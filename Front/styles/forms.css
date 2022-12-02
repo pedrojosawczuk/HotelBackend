@@ -67,7 +67,7 @@
     justify-content: center;
     flex-direction: column;
     width: 500px;
-
+    margin-bottom: 16px;
 
     border: 1px solid var(--Blue-Dark);
 }
