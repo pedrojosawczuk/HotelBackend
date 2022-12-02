@@ -35,22 +35,29 @@
         <br>
 
         <label for="">Dados do quarto<fieldset  class="forms">
-            <form action="?action=acomodainsert">
+            <form action="?action=acomodainsert" method="POST">
+            <input type='hidden' name='action' value='acomodainsert'>
+            <input type='hidden' name='id'
+                value='<?= @$acomodacao -> id ?>'>
                 <label for="DE">Camas de Casal:
-                    <input type="number" name="qt_cama_casal"></label> <br>
+                    <input type="number" name="qt_cama_casal"
+                value='<?= @$acomodacao -> qt_cama_casal ?>'></label> <br>
                 <label for="DS">Camas de Solteiro:
-                    <input type="number" name="qt_cama_solteiro"></label> <br>
+                    <input type="number" name="qt_cama_solteiro"
+                value='<?= @$acomodacao -> qt_cama_solteiro ?>'></label> <br>
                 <label for="DS">Camas Extras:
-                    <input type="number" name="camas_extras"></label> <br>
+                    <input type="number" name="camas_extras"
+                value='<?= @$acomodacao -> camas_extras ?>'></label> <br>
                 <label for="DS">Tipo de quarto:
-                    <select name="tipo_acomodacoes" id="type">
+                    <select name="tipo_acomodacoes" id="type"
+                value='<?= @$acomodacao -> fk_tarifa ?>'>
                     <?php foreach ($tarifas as $index => $tarifa) : ?>
                     <option value="<?= $tarifa -> id ?>">
                     <?= $tarifa -> tipo_acomodacoes ?></option>
                     <?php endforeach; ?>
                 </select></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
-                <a class="button-cad" href="list-acomodacoes.php">Cancelar</a>
+                <a class="button-cad" href="?action=listacomoda">Cancelar</a>
             </form>
         </fieldset>
         </label>

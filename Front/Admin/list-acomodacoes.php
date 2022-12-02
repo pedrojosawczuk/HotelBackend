@@ -50,7 +50,7 @@
                     <p>Tipo do quarto:
                         <?= $acomodacao -> id ?></p>
 
-                    <a class="button-sub" style="margin-top: 16px;" href="?action=editaracomoda&id=<?= $acomodacao -> id ?>">Editar Acomodação</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="?action=editarcomoda&id=<?= $acomodacao -> id ?>">Editar Acomodação</a>
                     <a class="button-sub" style="margin-top: 16px;" href="?action=deletaracomoda&id=<?= $acomodacao -> id ?>">Deletar Acomodação</a>
                 </div>
                 <?php endforeach; ?>

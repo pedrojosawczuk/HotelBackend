@@ -35,9 +35,12 @@
         <br>
 
         <label for="">Dados do Tarifa<fieldset  class="forms">
-            <form action="?action=createtarefa">
-                <label for="DS">Preço: <input type="number" name="preco"></label> <br>
-                <label for="DS">Tipo de quarto: <input type="number" name="tipo_acomodacoes"></label> <br>
+            <form action="?action=salvartarifa" method="POST">
+            <input type='hidden' name='action' value='salvartarifa'>
+            <input type='hidden' name='id'
+                value='<?= @$tarifa -> id ?>'>
+                <label for="DS">Preço: <input type="number" name="preco" value='<?= @$tarifa -> preco ?>'></label> <br>
+                <label for="DS">Tipo de quarto: <input type="text" name="tipo_acomodacoes" value='<?= @$tarifa -> tipo_acomodacoes ?>'></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
                 <a class="button-cad" href="list-tarifas.php">Cancelar</a>
             </form>

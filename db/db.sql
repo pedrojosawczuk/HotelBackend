@@ -24,7 +24,7 @@ CREATE TABLE tb_acomodacoes (
     id BIGINT NOT NULL AUTO_INCREMENT,
     qt_cama_casal INT(20) NOT NULL default 0,
     qt_cama_solteiro INT(20) NOT NULL default 0,
-    camas_extras VARCHAR(128) NOT NULL default '',
+    camas_extras INT(20) NOT NULL default 0,
     fk_tarifa BIGINT,
     PRIMARY KEY  (id),
     CONSTRAINT fk_acomodacoesXtarifa
@@ -54,3 +54,9 @@ INSERT INTO tb_user (nome, email,  senha, perfil)
     VALUES ('Juca da Silva', 'juca2@gmail.com', 1234, 'user');
 INSERT INTO tb_user (nome, email,  senha, perfil)
     VALUES ('Juca da Silva', 'juca3@gmail.com', 1234, 'user');
+
+INSERT INTO `tb_tarifa` (`tipo_acomodacoes`, `preco`)
+    VALUES ('Standard', '200');
+INSERT INTO `tb_tarifa` (`tipo_acomodacoes`, `preco`)
+    VALUES ('Luxo', '300');
+    
