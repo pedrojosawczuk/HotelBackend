@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="Front/styles/main.css">
 </head>
 <body>
     <header>
@@ -33,13 +33,13 @@
 
             <div class="list-acomodacoes">
             <?php
-                    foreach( $users as $index => $user) : ?>
+                foreach( $users as $index => $user) : ?>
                     <div>
-                    <h3>Quarto <?= $user -> id ?></h3>
-                    <p>Nome: <?= $user -> nome ?></p>
-                    <p>Email: <?= $user ->  email?></p>
-                </div>
-                    <?php endforeach; ?>
+                        <h3>ID: <?= $user -> id ?></h3>
+                        <p>Nome: <?= $user -> nome ?></p>
+                        <p>Email: <?= $user ->  email?></p>
+                    </div>
+            <?php endforeach; ?>
                 
             
         </div>
