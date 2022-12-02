@@ -30,7 +30,19 @@
         </aside>
         <div>
             <h2>Lista de Usuarios</h2>
-            <div>  aqui vão Usuarios</div>
+
+            <div class="list-acomodacoes">
+            <?php
+                    foreach( $users as $index => $user) : ?>
+                    <div>
+                    <h3>Quarto <?= $user -> id ?></h3>
+                    <p>Nome: <?= $user -> nome ?></p>
+                    <p>Email: <?= $user ->  email?></p>
+                </div>
+                    <?php endforeach; ?>
+                
+            
+        </div>
 
         </div>
 
