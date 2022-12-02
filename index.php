@@ -196,6 +196,11 @@ else if($action == 'useracomoda') {
     $view = 'Front/User/acomodacoes.php';
 }
 
+else if($action == 'logOut') {
+    session_destroy();
+    $view = 'Front/login.php';
+}
+
 
 require_once($view); // Abrindo uma view
 

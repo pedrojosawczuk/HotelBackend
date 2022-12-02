@@ -18,6 +18,7 @@
                     <li><a href="index.php?action=userhotelview">O Hotel</a></li>
                     <li class="tab-selected"><a href="index.php?action=usercreatereserva">☕ Reserva</a></li>
                     <li><a href="index.php?action=useracomoda">Acomodações</a></li>
+                    <li><a href="index.php?action=logOut">Sair</a></li>
                 </ul>
             </nav>
         </section>
