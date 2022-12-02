@@ -1,7 +1,7 @@
 DROP TABLE tb_reserva;
+DROP TABLE tb_acomodacoes;
 DROP TABLE tb_tarifa;
 DROP TABLE tb_user;
-DROP TABLE tb_acomodacoes;
 
 CREATE TABLE tb_user (
     id BIGINT NOT NULL AUTO_INCREMENT,
@@ -13,21 +13,24 @@ CREATE TABLE tb_user (
     UNIQUE(email)
 );
 
+CREATE TABLE tb_tarifa (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    tipo_acomodacoes VARCHAR(10) NOT NULL default 'Standart',
+    preco DECIMAL(12, 2) NOT NULL,
+    PRIMARY KEY  (id)
+);
+
 CREATE TABLE tb_acomodacoes (
     id BIGINT NOT NULL AUTO_INCREMENT,
     qt_cama_casal INT(20) NOT NULL default 0,
     qt_cama_solteiro INT(20) NOT NULL default 0,
     camas_extras VARCHAR(128) NOT NULL default '',
-    tipo_acomodacoes VARCHAR(1) NOT NULL default 'S',
-    PRIMARY KEY  (id)
+    fk_tarifa BIGINT,
+    PRIMARY KEY  (id),
+    CONSTRAINT fk_acomodacoesXtarifa
+        FOREIGN KEY (fk_tarifa) REFERENCES tb_tarifa (id)
 );
 
-CREATE TABLE tb_tarifa (
-    id BIGINT NOT NULL AUTO_INCREMENT,
-    tipo_acomodacoes VARCHAR(1) NOT NULL default 'S',
-    preco DECIMAL(12, 2) NOT NULL,
-    PRIMARY KEY  (id)
-);
 
 CREATE TABLE tb_reserva (
     id BIGINT NOT NULL AUTO_INCREMENT,
