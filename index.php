@@ -68,6 +68,12 @@ else if($action = 'listacomoda') {
     $view = 'Front/Admin/list-acomodacoes.php';
 }
 
+else if($action = 'listusers') {
+    // Buscar as pessoas no Banco de Dados
+    $users = $userDAO -> getAll();
+    $view = 'Front/Admin/list-users.php';
+}
+
 
 /*
 // Decidir qual ação será tomada
