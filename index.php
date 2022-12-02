@@ -161,20 +161,20 @@ if($view = 'view/list.php') {
 */
 
 else if($action == 'userhotelview') {
-    $view = 'Front/Admin/ohotel.php';
+    $view = 'Front/User/ohotel.php';
 }
 
 else if($action == 'usercreatereserva') {
-    $view = 'Front/Admin/reserva.php';
+    $view = 'Front/User/reserva.php';
 }
 
 else if($action == 'userhomepage') {
-    $view = 'Front/Admin/index.php';
+    $view = 'Front/User/index.php';
 }
 
 else if($action == 'useracomoda') {
     $acomodacoes = $acomodacoesDAO -> getAll();
-    $view = 'Front/Admin/acomodacoes.php';
+    $view = 'Front/User/acomodacoes.php';
 }
 
 
