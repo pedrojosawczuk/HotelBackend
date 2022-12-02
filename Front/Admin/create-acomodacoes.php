@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="Front/styles/main.css">
 </head>
 <body>
     <header>
@@ -28,7 +28,7 @@
         </aside>
         <div>
             <h2>Criar acomodação</h2>
-
+            <?= @$message ?>
         <br>
 
         <label for="">Dados do quarto<fieldset  class="forms">
@@ -61,7 +61,6 @@
             Email: contato@email.com.br
         </p>
     </footer>
-    
     
 </body>
 </html>
