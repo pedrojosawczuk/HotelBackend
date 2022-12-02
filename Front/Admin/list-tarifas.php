@@ -27,7 +27,7 @@
     </header>
     <main>
         <aside>
-            <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
+            <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
             <div class="header-body">
@@ -52,7 +52,7 @@
         </div>
 
         <aside>
-            <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
+            <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">
         </aside>
     </main>
     <footer>

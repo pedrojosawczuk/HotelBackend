@@ -25,7 +25,7 @@
     </header>
     <main>
         <aside>
-            <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
+            <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
             <h2>Reserva Online</h2>
@@ -65,7 +65,7 @@
         </div>
 
         <aside>
-            <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
+            <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">
         </aside>
     </main>
     <footer>
