@@ -173,6 +173,7 @@ else if($action == 'userhomepage') {
 }
 
 else if($action == 'useracomoda') {
+    $acomodacoes = $acomodacoesDAO -> getAll();
     $view = 'Front/Admin/acomodacoes.php';
 }
 

@@ -50,9 +50,10 @@
                 <label for="Tel">Adultos: <input type="number" value="1"></label><br>
                 <label for="Tel">Crianças: <input type="number" value="0"></label><br>
                 <label for="Tel">Acomodações:<select id="quartos" name="quartos"><br>
-                    <option value="Quarto1">Quarto 1</option>
-                    <option value="Quarto2">Quarto 2</option>
-                    <option value="Quarto3">Quarto 3</option>
+                     <?php foreach ($acomodacoes as $index => $acomodacao) : ?>
+                    <option value="<?= $acomodacao -> id ?>">
+                    <?= $acomodacao -> id ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </label><br><br>
                 <input class="button-sub" type="submit" value="Enviar">
