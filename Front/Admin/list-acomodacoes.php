@@ -47,9 +47,8 @@
                     <a class="button-sub" style="margin-top: 16px;" href="">Editar Acomodação</a>
                     <a class="button-sub" style="margin-top: 16px;" href="">Deletar Acomodação</a>
                 </div>
-                    <?php endforeach; ?>
+                <?php endforeach; ?>
                 
-            
         </div>
 
         </div>
