@@ -83,6 +83,7 @@ else if($action = 'listtarifa') {
 }
 
 else if($action = 'listuser') {
+    $users = $userDAO -> getAll();
     $view = 'Front/Admin/list-users.php';
 }
 
