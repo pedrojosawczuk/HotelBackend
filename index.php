@@ -89,26 +89,26 @@ else if($action == 'listuser') {
 }
 
 else if($action == 'acomodainsert') {
-    if(@$_REQUEST['nome'] && @$_REQUEST['email'] && @$_REQUEST['senha']) {
+    if(@$_REQUEST['qt_cama_casal'] && @$_REQUEST['qt_cama_solteiro'] && @$_REQUEST['camas_extras'] && @$_REQUEST['tipo_acomodacoes']) {
 
         
-        if(!$userDAO -> insert($_REQUEST)) {
+        if(!$acomodacoesDAO -> insert($_REQUEST)) {
             //$view = 'Front/login.php';
 
-            $user = $userDAO -> insert($_REQUEST);
+            $acomodacoes = $acomodacoesDAO -> insert($_REQUEST);
             $message = 'Erro ao salvar pessoa';
         } else {
             $message = 'Criado com sucesso';
         }
     } else {
         // Update
-        if(!$userDAO -> update($_POST)) {
+        if(!$acomodacoesDAO -> update($_POST)) {
             //$action = 'listacomoda';
     
             $message = 'Erro ao salvar pessoa';
         }
     }
-    $action = 'listacomoda';
+    $view = 'Front/Admin/list-acomodacoes.php';
 }
 
 else if($action == 'deletaracomoda') {
