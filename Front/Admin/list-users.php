@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>☕ Reservas</title>
+    <title>☕ Usuarios</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -15,10 +15,10 @@
         <section>
             <nav>
               <ul class="tab-container">
-              <li><a href="list-reservas.php">☕Reservas</a></li>
+              <li><a href="list-reservas.php">Reservas</a></li>
                 <li><a class="tab-selected" href="list-acomodacoes.php">Acomodações</a></li>
                 <li><a class="tab-selected" href="list-acomodacoes.php">Tarifa</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.php">Usuarios</a></li>
+                <li><a class="tab-selected" href="list-acomodacoes.php">☕ Usuarios</a></li>
                </ul>
             </nav>
           </section>
@@ -29,8 +29,8 @@
             <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
-            <h2>Lista de Reservas</h2>
-            <div>  aqui vão reservas</div>
+            <h2>Lista de Usuarios</h2>
+            <div>  aqui vão Usuarios</div>
 
         </div>
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>☕ Reservas</title>
+    <title>☕Criar Tarifa</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -15,9 +15,9 @@
         <section>
             <nav>
               <ul class="tab-container">
-              <li><a href="list-reservas.php">☕Reservas</a></li>
+              <li><a href="list-reservas.php">Reservas</a></li>
                 <li><a class="tab-selected" href="list-acomodacoes.php">Acomodações</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.php">Tarifa</a></li>
+                <li><a class="tab-selected" href="list-acomodacoes.php">☕ Tarifa</a></li>
                 <li><a class="tab-selected" href="list-acomodacoes.php">Usuarios</a></li>
                </ul>
             </nav>
@@ -29,8 +29,24 @@
             <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
-            <h2>Lista de Reservas</h2>
-            <div>  aqui vão reservas</div>
+            <h2>Criar Tarifa</h2>
+
+        <br>
+
+        <label for="">Dados do Tarifa<fieldset  class="forms">
+            <form action="Responsavel">
+                <label for="DE">Id: <input type="number"></label> <br>
+                <label for="DS">Preço: <input type="number"></label> <br>
+                <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
+                    <option value="stand">Standard</option>
+                    <option value="lux">Luxo</option>
+
+                </select></label> <br>
+                <input class="button-sub" type="submit" value="Criar">
+                <a class="button-cad" href="list-tarifas.php">Cancelar</a>
+            </form>
+        </fieldset>
+        </label>
 
         </div>
 

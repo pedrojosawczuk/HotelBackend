@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>☕Criar Acomodação</title>
+    <title>☕Lista Acomodação</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -17,6 +17,8 @@
               <ul class="tab-container">
                 <li><a href="list-reservas.php">Reservas</a></li>
                 <li><a class="tab-selected" href="list-acomodacoes.php">☕ Acomodações</a></li>
+                <li><a class="tab-selected" href="list-acomodacoes.php">Tarifa</a></li>
+                <li><a class="tab-selected" href="list-acomodacoes.php">Usuarios</a></li>
                </ul>
             </nav>
           </section>
@@ -40,6 +42,24 @@
                     </div>
                 <?php endforeach; ?>
             </div>
+
+            <div class="list-acomodacoes">
+            <?php
+                    foreach( $acomodacoes as $index => $acomodacao) : ?>
+                    <div>
+                    <h3>Quarto <?= $acomodacao -> id ?></h3>
+                    <p>Quantidade de camas de casal: <?= $acomodacao -> qt_cama_casal ?></p>
+                    <p>Quantidade de camas de solteiro: <?= $acomodacao ->  qt_cama_solteiro?></p>
+                    <p>Capacidade do quarto: <?= ($acomodacao -> qt_cama_casal * 2) + $acomodacao ->  qt_cama_solteiro?></p>
+                    <p>Tipo do quarto: <?= $acomodacao ->  ?></p>
+
+                    <a class="button-sub" style="margin-top: 16px;" href="">Editar Acomodação</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="">Deletar Acomodação</a>
+                </div>
+                    <?php endforeach; ?>
+                
+            
+        </div>
 
         </div>
 
