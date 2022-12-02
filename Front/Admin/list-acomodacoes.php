@@ -38,14 +38,19 @@
             <?php
                     foreach( $acomodacoes as $index => $acomodacao) : ?>
                     <div>
-                    <h3>Quarto <?= $acomodacao -> id ?></h3>
-                    <p>Quantidade de camas de casal: <?= $acomodacao -> qt_cama_casal ?></p>
-                    <p>Quantidade de camas de solteiro: <?= $acomodacao ->  qt_cama_solteiro?></p>
-                    <p>Capacidade do quarto: <?= ($acomodacao -> qt_cama_casal * 2) + $acomodacao ->  qt_cama_solteiro?></p>
-                    <p>Tipo do quarto: <?= $acomodacao -> id ?></p>
+                    <h3>Quarto
+                        <?= $acomodacao -> id ?></h3>
+                    <p>Quantidade de camas de casal:
+                        <?= $acomodacao -> qt_cama_casal ?></p>
+                    <p>Quantidade de camas de solteiro:
+                        <?= $acomodacao ->  qt_cama_solteiro?></p>
+                    <p>Capacidade do quarto:
+                        <?= ($acomodacao -> qt_cama_casal * 2) + $acomodacao ->  qt_cama_solteiro?></p>
+                    <p>Tipo do quarto:
+                        <?= $acomodacao -> id ?></p>
 
-                    <a class="button-sub" style="margin-top: 16px;" href="">Editar Acomodação</a>
-                    <a class="button-sub" style="margin-top: 16px;" href="">Deletar Acomodação</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="?action=editaracomoda&id=<?= $acomodacao -> id ?>">Editar Acomodação</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="?action=deletaracomoda&id=<?= $acomodacao -> id ?>">Deletar Acomodação</a>
                 </div>
                 <?php endforeach; ?>
                 

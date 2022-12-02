@@ -103,11 +103,30 @@ else if($action == 'acomodainsert') {
     } else {
         // Update
         if(!$userDAO -> update($_POST)) {
-            //$view = 'view/form.php';
+            //$action = 'listacomoda';
     
             $message = 'Erro ao salvar pessoa';
         }
     }
+    $action = 'listacomoda';
+}
+
+else if($action == 'deletaracomoda') {
+    $acomodacoesDAO -> editar($_REQUEST['id']);
+    $action = 'listacomoda';
+}
+else if($action == 'editarcomoda') {
+    $acomodacoesDAO -> delete($_REQUEST['id']);
+    $action = 'listacomoda';
+}
+
+else if($action == 'editartarifa') {
+    $tarifaDAO -> editar($_REQUEST['id']);
+    $action = 'listatarifa';
+}
+else if($action == 'deletartarifa') {
+    $tarifaDAO -> delete($_REQUEST['id']);
+    $action = 'listatarifa';
 }
 /*
 // Decidir qual ação será tomada

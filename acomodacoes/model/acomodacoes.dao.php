@@ -24,6 +24,17 @@
         }
 
         public function insert($acomodacoes) {
+
+            
+        $stmt = $this -> pdo -> prepare("INSERT INTO tb_acomodacoes (qt_cama_casal, qt_cama_solteiro,  camas_extras, fk_tarifa) VALUES (:qt_cama_casal, :qt_cama_solteiro, :camas_extras, :tipo_acomodacoes)");
+
+        $stmt -> bindValue(':nome', $acomodacoes['nome']);
+        $stmt -> bindValue(':email', $acomodacoes['email']);
+        $stmt -> bindValue(':camas_extras', $acomodacoes['camas_extras']);
+        $stmt -> bindValue(':tipo_acomodacoes', $acomodacoes['tipo_acomodacoes']);
+
+        return $stmt -> execute();
+/*
             $stmt = $this->pdo->prepare("INSERT INTO tb_acomodacoes (qt_cama_casal, qt_cama_solteiro, camas_extras, tipo_acomodacoes) VALUES (:qt_cama_casal, :qt_cama_solteiro, :camas_extras, :tipo_acomodacoes)");
             $stmt -> bindValue(':qt_cama_casal', $acomodacoes -> qt_cama_casal);
             $stmt -> bindValue(':qt_cama_solteiro', $acomodacoes -> qt_cama_solteiro);
@@ -35,7 +46,7 @@
 
             $acomodacoes -> id = $this -> pdo -> lastInsertId();
 
-            return $acomodacoes;
+            return $acomodacoes;*/
         }
 
         public function update($id, $acomodacoes) {

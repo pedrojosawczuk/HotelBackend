@@ -34,11 +34,15 @@
         <br>
 
         <label for="">Dados do quarto<fieldset  class="forms">
-            <form action="Responsavel">
-                <label for="DE">Numero: <input type="number"></label> <br>
-                <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
+            <form action="?action=acomodainsert">
+                <label for="DE">Camas de Casal:
+                    <input type="number" name="qt_cama_casal"></label> <br>
+                <label for="DS">Camas de Solteiro:
+                    <input type="number" name="qt_cama_solteiro"></label> <br>
+                <label for="DS">Camas Extras:
+                    <input type="number" name="camas_extras"></label> <br>
                 <label for="DS">Tipo de quarto:
-                    <select name="Tipo" id="type">
+                    <select name="tipo_acomodacoes" id="type">
                     <?php foreach ($tarifas as $index => $tarifa) : ?>
                     <option value="<?= $tarifa -> id ?>">
                     <?= $tarifa -> tipo_acomodacoes ?></option>

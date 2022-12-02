@@ -42,8 +42,8 @@
                     <p>Tipo: <?= $tarifa -> tipo_acomodacoes ?></p>
                     <p>Preço: <?= $tarifa ->  preco ?></p>
 
-                    <a class="button-sub" style="margin-top: 16px;" href="">Editar Tarifa</a>
-                    <a class="button-sub" style="margin-top: 16px;" href="">Deletar Tarifa</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="?action=editartarifa&id=<?= $tarifa -> id ?>">Editar Tarifa</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="?action=deletartarifa&id=<?= $tarifa -> id ?>">Deletar Tarifa</a>
                     </div>
                 <?php endforeach; ?>
             </div>
