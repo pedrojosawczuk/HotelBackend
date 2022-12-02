@@ -14,9 +14,11 @@
         <a class="title" href=""><h1>Hotel Spa Le Calendal</h1></a>
         <section>
             <nav>
-              <ul class="tab-container">
-                <li><a href="list-reservas.php">Reservas</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.php">☕ Acomodações</a></li>
+            <ul class="tab-container">
+                <li><a href="index.php?antion=listacomoda">Reservas</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listacomoda">☕ Acomodações</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listtarifa">Tarifa</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listuser">Usuarios</a></li>
                </ul>
             </nav>
           </section>

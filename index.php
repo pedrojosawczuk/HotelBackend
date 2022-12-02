@@ -62,32 +62,33 @@ else if($action == 'userinsert') {
         }
     }
 }
-/*
-else if($action = 'listacomoda') {
+
+else if($action == 'listacomoda') {
     // Buscar as pessoas no Banco de Dados
     $acomodacoes = $acomodacoesDAO -> getAll();
     $view = 'Front/Admin/list-acomodacoes.php';
 }
 
-else if($action = 'createacomoda') {
+else if($action == 'createacomoda') {
     $view = 'Front/Admin/create-acomodacoes.php';
 }
 
-else if($action = 'createtarifa') {
+else if($action == 'createtarifa') {
+    $tarifas = $tarifaDAO -> getAll();
     $view = 'Front/Admin/create-tarifa.php';
 }
-*/
-else if($action = 'listtarifa') {
+
+else if($action == 'listtarifa') {
     $tarifas = $tarifaDAO -> getAll();
     $view = 'Front/Admin/list-tarifas.php';
 }
 
-else if($action = 'listuser') {
+else if($action == 'listuser') {
     $users = $userDAO -> getAll();
     $view = 'Front/Admin/list-users.php';
 }
 
-/*
+
 else if($action == 'acomodainsert') {
     if(@$_REQUEST['nome'] && @$_REQUEST['email'] && @$_REQUEST['senha']) {
 
@@ -109,6 +110,7 @@ else if($action == 'acomodainsert') {
         }
     }
 }
+/*
 // Decidir qual ação será tomada
 if($action == 'novo') {
     $view = 'view/form.php';
