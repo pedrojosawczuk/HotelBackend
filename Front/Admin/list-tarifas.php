@@ -36,8 +36,15 @@
             
             <div>
                 <?php
-                    foreach( ) : ?>
-                    
+                    foreach( $tarifas as $index => $tarifa) : ?>
+                    <div>
+                    <h3>ID: <?= $tarifa -> id ?></h3>
+                    <p>Tipo: <?= $tarifa -> tipo_acomodacoes ?></p>
+                    <p>Preço: <?= $tarifa ->  preco ?></p>
+
+                    <a class="button-sub" style="margin-top: 16px;" href="">Editar Tarifa</a>
+                    <a class="button-sub" style="margin-top: 16px;" href="">Deletar Tarifa</a>
+                    </div>
                 <?php endforeach; ?>
             </div>
 
