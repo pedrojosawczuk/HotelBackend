@@ -36,9 +36,9 @@
                 <label for="DE">Numero: <input type="number"></label> <br>
                 <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
                 <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
-                    <option value="econ">Economico</option>
-                    <option value="stand">Standard</option>
-                    <option value="lux">Luxo</option>
+                    <?php foreach ($tarifas as $index -> $tarifa) :?>
+                    <option value="<?$tarifa -> tipo_acomodacoes?>"><?$tarifa -> tipo_acomodacoes?></option>
+                    <? endforeach :?>
 
                 </select></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
