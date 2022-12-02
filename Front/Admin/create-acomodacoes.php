@@ -37,11 +37,12 @@
             <form action="Responsavel">
                 <label for="DE">Numero: <input type="number"></label> <br>
                 <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
-                <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
-                    <?php foreach ($tarifas as $index -> $tarifa) :?>
-                    <option value="<?$tarifa -> tipo_acomodacoes?>"><?$tarifa -> tipo_acomodacoes?></option>
+                <label for="DS">Tipo de quarto:
+                    <select name="Tipo" id="type">
+                    <?php foreach ($tarifas as $index => $tarifa) : ?>
+                    <option value="<?= $tarifa -> id ?>">
+                    <?= $tarifa -> tipo_acomodacoes ?></option>
                     <?php endforeach; ?>
-
                 </select></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
                 <a class="button-cad" href="list-acomodacoes.php">Cancelar</a>
