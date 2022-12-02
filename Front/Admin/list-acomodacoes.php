@@ -31,7 +31,7 @@
         <div>
             <div class="header-body">
                 <h2>Lista de Acomodações</h2>
-                <a class="button-sub" style="margin-left: 16px;" href="create-acomodacoes.php">Criar Acomodação</a>
+                <a class="button-sub" style="margin-left: 16px;" href="?action=createacomoda">Criar Acomodação</a>
             </div>
 
             <div class="list-acomodacoes">

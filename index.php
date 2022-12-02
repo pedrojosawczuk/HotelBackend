@@ -70,11 +70,11 @@ else if($action == 'listacomoda') {
 }
 
 else if($action == 'createacomoda') {
+    $tarifas = $tarifaDAO -> getAll();
     $view = 'Front/Admin/create-acomodacoes.php';
 }
 
 else if($action == 'createtarifa') {
-    $tarifas = $tarifaDAO -> getAll();
     $view = 'Front/Admin/create-tarifa.php';
 }
 
@@ -87,7 +87,6 @@ else if($action == 'listuser') {
     $users = $userDAO -> getAll();
     $view = 'Front/Admin/list-users.php';
 }
-
 
 else if($action == 'acomodainsert') {
     if(@$_REQUEST['nome'] && @$_REQUEST['email'] && @$_REQUEST['senha']) {
