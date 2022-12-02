@@ -2,12 +2,14 @@
 require_once('db/connection.inc.php');
 require_once('user/model/user.dao.php');
 require_once('acomodacoes/model/acomodacoes.dao.php');
+require_once('tarifa/model/tarifa.dao.php');
 require_once('login/criarsession.php');
 require_once('login/mostrarsession.php');
 
 // Instanciar um objeto DAO de pessoa
 $userDAO = new UserDAO($pdo);
 $acomodacoesDAO = new AcomodacoesDAO($pdo);
+$tarifaDAO = new TarifaDAO($pdo);
 
 // Recebe a ação desejada do cliente
 $action = @$_REQUEST['action'];
@@ -54,22 +56,58 @@ else if($action == 'userinsert') {
     } else {
         // Update
         if(!$userDAO -> update($_POST)) {
-            /*$view = 'view/form.php';*/
+            //$view = 'view/form.php';
     
             $message = 'Erro ao salvar pessoa';
         }
     }
-
 }
-
+/*
 else if($action = 'listacomoda') {
     // Buscar as pessoas no Banco de Dados
     $acomodacoes = $acomodacoesDAO -> getAll();
     $view = 'Front/Admin/list-acomodacoes.php';
 }
 
+else if($action = 'createacomoda') {
+    $view = 'Front/Admin/create-acomodacoes.php';
+}
+
+else if($action = 'createtarifa') {
+    $view = 'Front/Admin/create-tarifa.php';
+}
+*/
+else if($action = 'listtarifa') {
+    $tarifas = $tarifaDAO -> getAll();
+    $view = 'Front/Admin/list-tarifas.php';
+}
+
+else if($action = 'listuser') {
+    $view = 'Front/Admin/list-users.php';
+}
 
 /*
+else if($action == 'acomodainsert') {
+    if(@$_REQUEST['nome'] && @$_REQUEST['email'] && @$_REQUEST['senha']) {
+
+        
+        if(!$userDAO -> insert($_REQUEST)) {
+            //$view = 'Front/login.php';
+
+            $user = $userDAO -> insert($_REQUEST);
+            $message = 'Erro ao salvar pessoa';
+        } else {
+            $message = 'Criado com sucesso';
+        }
+    } else {
+        // Update
+        if(!$userDAO -> update($_POST)) {
+            //$view = 'view/form.php';
+    
+            $message = 'Erro ao salvar pessoa';
+        }
+    }
+}
 // Decidir qual ação será tomada
 if($action == 'novo') {
     $view = 'view/form.php';
