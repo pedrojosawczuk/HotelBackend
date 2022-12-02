@@ -19,6 +19,7 @@
                 <li><a class="tab-selected" href="index.php?action=listacomoda">Acomodações</a></li>
                 <li><a class="tab-selected" href="index.php?action=listtarifa">☕ Tarifa</a></li>
                 <li><a class="tab-selected" href="index.php?action=listuser">Usuarios</a></li>
+                <li><a href="index.php?action=logOut">Sair</a></li>
                </ul>
             </nav>
           </section>
