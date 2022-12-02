@@ -40,7 +40,7 @@
                 <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
                     <?php foreach ($tarifas as $index -> $tarifa) :?>
                     <option value="<?$tarifa -> tipo_acomodacoes?>"><?$tarifa -> tipo_acomodacoes?></option>
-                    <? endforeach :?>
+                    <?php endforeach; ?>
 
                 </select></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
