@@ -15,8 +15,8 @@
         <section>
             <nav>
               <ul class="tab-container">
-                <li><a href="list-reservas.html">Reservas</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.html">☕ Acomodações</a></li>
+                <li><a href="list-reservas.php">Reservas</a></li>
+                <li><a class="tab-selected" href="list-acomodacoes.php">☕ Acomodações</a></li>
                </ul>
             </nav>
           </section>
@@ -27,12 +27,25 @@
             <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
-            <div class="header-body">
-                <h2>Lista de Acomodações</h2>
-                <a class="button-sub" style="margin-left: 16px;" href="create-acomodacoes.html">Criar Acomodação</a>
-            </div>
-            
-            <div>Aqui vão acomodações</div>
+            <h2>Criar acomodação</h2>
+
+        <br>
+
+        <label for="">Dados do quarto<fieldset  class="forms">
+            <form action="Responsavel">
+                <label for="DE">Numero: <input type="number"></label> <br>
+                <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
+                <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
+                    <option value="econ">Economico</option>
+                    <option value="stand">Standard</option>
+                    <option value="lux">Luxo</option>
+
+                </select></label> <br>
+                <input class="button-sub" type="submit" value="Criar">
+                <a class="button-cad" href="list-acomodacoes.php">Cancelar</a>
+            </form>
+        </fieldset>
+        </label>
 
         </div>
 

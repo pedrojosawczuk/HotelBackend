@@ -7,7 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="Front/styles/main.css">
 </head>
 <body>
     <header>
@@ -15,21 +15,21 @@
     </header>
     <main>
         <aside>
-            <img class="prop-img" src="Imagens/propag27.jpg" alt="Propaganda">
+            <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
             <h2>Login</h2>
-
+            <?= @$message ?>
         <br>
 
         <br>
 
     <fieldset  class="forms">
-            <form action="Login">
-                <label for="DE">Usuario: <input type="text"></label> <br>
-                <label for="DS">Senha: <input type="text"></label> <br>
+            <form action="index.php?action=userlogin" method="POST">
+                <label for="DE">Usuario: <input type="text" name="email"></label> <br>
+                <label for="DS">Senha: <input type="text" name="senha"></label> <br>
                 <input class="button-sub" type="submit" value="Enviar">
-                <a class="button-cad" href="cadastro.html">Primeiro acesso</a>
+                <a class="button-cad" href="index.php?action=usercadastro">Primeiro acesso</a>
             </form>
         </fieldset>
         </label>

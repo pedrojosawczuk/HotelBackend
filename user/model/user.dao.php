@@ -41,17 +41,14 @@ class UserDAO
     public function insert($user)
     {
         $stmt = $this -> pdo -> prepare("INSERT INTO tb_user (nome, email,  senha, perfil) VALUES (:nome, :email, :senha, :perfil)");
-        $stmt -> bindValue(':nome', $user -> nome);
-        $stmt -> bindValue(':email', $user -> email);
-        $stmt -> bindValue(':senha', $user -> senha);
-        $stmt -> bindValue(':perfil', $user -> perfil);
+        $perfil = 'user';
+        $stmt -> bindValue(':nome', $user['nome']);
+        $stmt -> bindValue(':email', $user['email']);
+        $stmt -> bindValue(':senha', $user['senha']);
+        $stmt -> bindValue(':perfil', $perfil);
 
-        $stmt -> execute();
-        $user = clone $user;
-
-        $user -> id = $this -> pdo -> lastInsertId();
-
-        return $user;
+        return $stmt -> execute();/*
+        return $stmt -> fetchObject();*/
     }
 
     public function update($email, $user)

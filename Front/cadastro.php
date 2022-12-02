@@ -20,31 +20,28 @@
         </aside>
         <div>
             <h2>Fazer cadastro</h2>
-
+            <?= @$message ?>
         <br>
 
        
+        <form action="index.php?action=userinsert" method="POST">
         <label for="">Dados Pessoais <fieldset>
-            <form action="Responsavel">
-                <label for="Nome">Nome <input type="text" placeholder="Nome"></label> 
-                <label for="E-mail">E-mail <input type="email" placeholder="contato@email.com"></label>
-                <label for="Tel">Telefone <input type="tel" placeholder="99 99999-9999"></label>
-            </form>
+                <label for="Nome">Nome <input type="text" placeholder="Nome" name="nome"></label>
         </fieldset>
         </label>
 
         <br>
 
         <label for="">Dados de Login<fieldset  class="forms">
-            <form action="Responsavel">
-                <label for="DE">Usuario: <input type="text"></label> <br>
-                <label for="DS">Senha: <input type="text"></label> <br>
+                 
+                <label for="E-mail">E-mail <input type="email" placeholder="contato@email.com" name="email"></label><br>
+                <label for="DS">Senha: <input type="text" name="senha"></label> <br>
                 <input class="button-sub" type="submit" value="Enviar">
-                <a class="button-cad" href="login.html">Já possuo um login</a>
-            </form>
+                <a class="button-cad" href="index.php">Já possuo um login</a>
         </fieldset>
         </label>
 
+    </form>
         </div>
 
         <aside>

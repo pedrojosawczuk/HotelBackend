@@ -1,24 +1,73 @@
 <?php
 require_once('db/connection.inc.php');
-require_once('user/user.dao.php');
+require_once('user/model/user.dao.php');
+require_once('acomodacoes/model/acomodacoes.dao.php');
+require_once('login/criarsession.php');
+require_once('login/mostrarsession.php');
 
 // Instanciar um objeto DAO de pessoa
 $userDAO = new UserDAO($pdo);
+$acomodacoesDAO = new AcomodacoesDAO($pdo);
 
 // Recebe a ação desejada do cliente
 $action = @$_REQUEST['action'];
-$view = 'Front/login.html'; // View default
+$view = 'Front/login.php'; // View default
 
-if($action == 'login') {
+if($action == 'userlogin') {
     
     if(@$_REQUEST['email'] && @$_REQUEST['senha']) {
-        $userDAO -> login($_REQUEST['email'], $_REQUEST['senha']);
+        $user = $userDAO -> login($_REQUEST['email'], $_REQUEST['senha']);
+        if($user) {
+            $email = $user -> email;
+            criarsession($user -> email, $user -> perfil);
+            $perfil = currentuser();
+            if($perfil == 'admin') {
+                $view = 'Front/Admin/list-acomodacoes.php';
+            } else {
+                $view = 'Front/User/index.php';
+            }
+        } else {
+            $message = 'USUÁRIO NÃO ENCONTRADO';
+        }
     }
     else {
         $message = 'Email e/ou senha não informados.';
     }
-    print_r(@$message);
 }
+
+else if($action == 'usercadastro') {
+    $view = 'Front/cadastro.php';
+}
+
+else if($action == 'userinsert') {
+    if(@$_REQUEST['nome'] && @$_REQUEST['email'] && @$_REQUEST['senha']) {
+
+        
+        if(!$userDAO -> insert($_REQUEST)) {
+            //$view = 'Front/login.php';
+
+            $user = $userDAO -> insert($_REQUEST);
+            $message = 'Erro ao salvar pessoa';
+        } else {
+            $message = 'Criado com sucesso';
+        }
+    } else {
+        // Update
+        if(!$userDAO -> update($_POST)) {
+            /*$view = 'view/form.php';*/
+    
+            $message = 'Erro ao salvar pessoa';
+        }
+    }
+
+}
+
+else if($action = 'listacomoda') {
+    // Buscar as pessoas no Banco de Dados
+    $acomodacoes = $acomodacoesDAO -> getAll();
+    $view = 'Front/Admin/list-acomodacoes.php';
+}
+
 
 /*
 // Decidir qual ação será tomada
@@ -63,8 +112,6 @@ if($action == 'novo') {
     }
 
 }
-*/
-/*
 if($view = 'view/list.php') {
     // Buscar as pessoas no Banco de Dados
     $pessoas = $userDAO -> getAll();
@@ -72,7 +119,6 @@ if($view = 'view/list.php') {
     // print_r($pessoas);
 }
 */
-
 require_once($view); // Abrindo uma view
 
 ?>

@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>☕Criar Acomodação</title>
+    <title>☕ Reservas</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
@@ -15,8 +15,8 @@
         <section>
             <nav>
               <ul class="tab-container">
-                <li><a href="list-reservas.html">Reservas</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.html">☕ Acomodações</a></li>
+                <li><a class="tab-selected" href="list-reservas.php">☕ Reservas</a></li>
+                <li><a href="list-acomodacoes.php">Acomodações</a></li>
                </ul>
             </nav>
           </section>
@@ -27,25 +27,8 @@
             <img class="prop-img" src="../Imagens/propag27.jpg" alt="Propaganda">
         </aside>
         <div>
-            <h2>Criar acomodação</h2>
-
-        <br>
-
-        <label for="">Dados do quarto<fieldset  class="forms">
-            <form action="Responsavel">
-                <label for="DE">Numero: <input type="number"></label> <br>
-                <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
-                <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
-                    <option value="econ">Economico</option>
-                    <option value="stand">Standard</option>
-                    <option value="lux">Luxo</option>
-
-                </select></label> <br>
-                <input class="button-sub" type="submit" value="Criar">
-                <a class="button-cad" href="list-acomodacoes.html">Cancelar</a>
-            </form>
-        </fieldset>
-        </label>
+            <h2>Lista de Reservas</h2>
+            <div>  aqui vão reservas</div>
 
         </div>
 

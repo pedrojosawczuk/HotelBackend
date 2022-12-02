@@ -14,14 +14,14 @@
 </head>
 <body>
     <header>
-        <a class="title" href="index.html"><h1>☕ Hotel Spa Le Calendal ☕</h1></a>
+        <a class="title" href="index.php"><h1>☕ Hotel Spa Le Calendal ☕</h1></a>
         <section>
             <nav>
                 <ul class="tab-container">
-                    <li><a href="ohotel.html">O Hotel</a></li>
-                    <li><a href="faleconosco.html">Fale Conosco</a></li>
-                    <li><a href="reserva.html">Reserva</a></li>
-                    <li><a href="acomodacoes.html">Acomodações</a></li>
+                    <li><a href="ohotel.php">O Hotel</a></li>
+                    <li><a href="faleconosco.php">Fale Conosco</a></li>
+                    <li><a href="reserva.php">Reserva</a></li>
+                    <li><a href="acomodacoes.php">Acomodações</a></li>
                 </ul>
             </nav>
         </section>
@@ -35,7 +35,7 @@
                 <img class="hotel-image" src="Front/Imagens/Hotel.jpg" alt="Hotel">
             </section>
             <section class="card-section">
-                <a href="ohotel.html">
+                <a href="ohotel.php">
                 <h2>
                     Conheça o Hotel Spa Le Calendal
                 </h2>
@@ -67,7 +67,7 @@
             <br>
             <br>
             
-            <a class="button-back-to-top" href="index.html">Voltar ao topo</a>
+            <a class="button-back-to-top" href="index.php">Voltar ao topo</a>
         </div>
         <aside>
             <img class="prop-img" src="Front/Imagens/propag27.jpg" alt="Propaganda">

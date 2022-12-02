@@ -1,11 +1,13 @@
 <?php
 
-// Inicializar a sessão
-session_start();
+function currentuser() {
 
 if(@$_SESSION['classiauto.email'])
-    echo 'O usuário ' . $_SESSION['classiauto.email'] . ' está logado';
+    //$message = 'O usuário ' . $_SESSION['classiauto.email'] . ' ' . $_SESSION['classiauto.perfil'] . ' está logado';
+    return $_SESSION['classiauto.perfil'];
 else
-    echo 'Nenhum usuário está logado';
+    $message = 'Nenhum usuário está logado';
+    return 0;
+}
 
 ?>
