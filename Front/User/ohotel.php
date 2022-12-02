@@ -14,14 +14,13 @@
 </head>
 <body>
     <header>
-        <a class="title" href="index.php"><h1>Hotel Spa Le Calendal</h1></a>
+        <a class="title" href="index.php?action=userhomepage"><h1>Hotel Spa Le Calendal</h1></a>
         <section>
             <nav>
                 <ul class="tab-container">
-                    <li class="tab-selected"><a href="ohotel.php">☕ O Hotel</a></li>
-                    <li><a href="faleconosco.php">Fale Conosco</a></li>
-                    <li><a href="reserva.php">Reserva</a></li>
-                    <li><a href="acomodacoes.php">Acomodações</a></li>
+                    <li class="tab-selected"><a href="index.php?action=userhotelview">☕ O Hotel</a></li>
+                    <li><a href="index.php?action=usercreatereserva">Reserva</a></li>
+                    <li><a href="index.php?action=useracomoda">Acomodações</a></li>
                 </ul>
 
             </nav>

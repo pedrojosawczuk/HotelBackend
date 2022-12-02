@@ -160,6 +160,24 @@ if($view = 'view/list.php') {
     // print_r($pessoas);
 }
 */
+
+else if($action == 'userhotelview') {
+    $view = 'Front/Admin/ohotel.php';
+}
+
+else if($action == 'usercreatereserva') {
+    $view = 'Front/Admin/reserva.php';
+}
+
+else if($action == 'userhomepage') {
+    $view = 'Front/Admin/index.php';
+}
+
+else if($action == 'useracomoda') {
+    $view = 'Front/Admin/acomodacoes.php';
+}
+
+
 require_once($view); // Abrindo uma view
 
 ?>
