@@ -75,6 +75,7 @@ else if($action == 'createacomoda') {
 }
 
 else if($action == 'createtarifa') {
+    $tarifas = $tarifaDAO -> insert($_REQUEST);
     $view = 'Front/Admin/create-tarifa.php';
 }
 
@@ -90,7 +91,6 @@ else if($action == 'listuser') {
 
 else if($action == 'acomodainsert') {
     if(@$_REQUEST['qt_cama_casal'] && @$_REQUEST['qt_cama_solteiro'] && @$_REQUEST['camas_extras'] && @$_REQUEST['tipo_acomodacoes']) {
-
         
         if(!$acomodacoesDAO -> insert($_REQUEST)) {
             //$view = 'Front/login.php';

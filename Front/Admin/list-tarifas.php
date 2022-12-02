@@ -32,7 +32,7 @@
         <div>
             <div class="header-body">
                 <h2>Lista de Tarifas</h2>
-                <a class="button-sub" style="margin-left: 16px;" href="create-acomodacoes.php">Criar Tarifa</a>
+                <a class="button-sub" style="margin-left: 16px;" href="?action=createtarifa">Criar Tarifa</a>
             </div>
             
             <div>

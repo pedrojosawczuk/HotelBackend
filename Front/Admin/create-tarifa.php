@@ -35,14 +35,9 @@
         <br>
 
         <label for="">Dados do Tarifa<fieldset  class="forms">
-            <form action="Responsavel">
-                <label for="DE">Id: <input type="number"></label> <br>
-                <label for="DS">Preço: <input type="number"></label> <br>
-                <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
-                    <option value="stand">Standard</option>
-                    <option value="lux">Luxo</option>
-
-                </select></label> <br>
+            <form action="?action=createtarefa">
+                <label for="DS">Preço: <input type="number" name="preco"></label> <br>
+                <label for="DS">Tipo de quarto: <input type="number" name="tipo_acomodacoes"></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
                 <a class="button-cad" href="list-tarifas.php">Cancelar</a>
             </form>

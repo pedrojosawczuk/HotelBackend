@@ -24,16 +24,15 @@
         }
 
         public function insert($tarifa) {
-            $stmt = $this -> pdo -> prepare("INSERT INTO tb_tarifa (tipo_acomodacoes, preco) VALUES (:tipo_acomodacoes, :preco)");
-            $stmt -> bindValue(':tipo_acomodacoes', $tarifa -> tipo_acomodacoes);
-            $stmt -> bindValue(':preco', $tarifa -> preco);
+            
+        $stmt = $this -> pdo -> prepare("INSERT INTO tb_tarifa (tipo_acomodacoes, preco) VALUES (:tipo_acomodacoes, :preco)");
+        
+        $stmt -> bindValue(':tipo_acomodacoes', $tarifa -> tipo_acomodacoes);
+        $stmt -> bindValue(':preco', $tarifa -> preco);
 
-            $stmt -> execute();
-            $tarifa = clone $tarifa;
+        return $stmt -> execute();/*
+        return $stmt -> fetchObject();*/
 
-            $tarifa -> id = $this -> pdo -> lastInsertId();
-
-            return $tarifa;
         }
 
         public function update($id, $tarifa) {
