@@ -14,9 +14,11 @@
         <a class="title" href=""><h1>Hotel Spa Le Calendal</h1></a>
         <section>
             <nav>
-              <ul class="tab-container">
-                <li><a href="list-reservas.php">Reservas</a></li>
-                <li><a class="tab-selected" href="list-acomodacoes.php">☕ Acomodações</a></li>
+            <ul class="tab-container">
+                <li><a href="index.php?antion=listacomoda">Reservas</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listacomoda">☕ Acomodações</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listtarifa">Tarifa</a></li>
+                <li><a class="tab-selected" href="index.php?antion=listuser">Usuarios</a></li>
                </ul>
             </nav>
           </section>
@@ -36,9 +38,9 @@
                 <label for="DE">Numero: <input type="number"></label> <br>
                 <label for="DS">Quantidade de pessoas: <input type="number"></label> <br>
                 <label for="DS">Tipo de quarto: <select name="Tipo" id="type">
-                    <option value="econ">Economico</option>
-                    <option value="stand">Standard</option>
-                    <option value="lux">Luxo</option>
+                    <?php foreach ($tarifas as $index -> $tarifa) :?>
+                    <option value="<?$tarifa -> tipo_acomodacoes?>"><?$tarifa -> tipo_acomodacoes?></option>
+                    <? endforeach :?>
 
                 </select></label> <br>
                 <input class="button-sub" type="submit" value="Criar">
