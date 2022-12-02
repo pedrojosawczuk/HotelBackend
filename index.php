@@ -178,6 +178,7 @@ else if($action == 'useracomoda') {
 }
 
 else if($action == 'logOut') {
+    session_destroy();
     $view = 'Front/login.php';
 }
 
